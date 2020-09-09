@@ -1,0 +1,17 @@
+{
+  "hosting": {
+    "site": "doyouneedafollower",
+    "public": "public",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ],
+    "rewrites": [
+      {
+        "source": "/follow_instagram",
+        "function": "follow_instagram"
+      }
+    ]
+  }
+}

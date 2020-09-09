@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Do you need a follower?</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="main.css">
+  <meta name="google-site-verification" content="6WWhS9shbjVoS1D6CkzDNyelerywDMfLgMve4YKw53M" />
+  
+  <meta name="description" content="Do you need a new follower on Instagram? :O Get it!" />
+  <meta name="twitter:title" content="Do you need a follower?">
+  <meta name="twitter:image" content="/instagram.png">
+
+  <meta itemprop="image" content="/instagram.png">
+
+  <meta property="og:title"              content="Do you need a follower?" />
+  <meta property="og:image"              content="/instagram.png" />
+</head>
+
+<body>
+
+  <div id="container" class="text-center main-container animate-bottom">
+    <img src="instagram.png" alt="" width="256px" height="256px">
+    <h1 class="h3 font-weight-normal mb-4">
+      Do you need a new follower on Instagram?
+    </h1>
+
+    <form id="getOneFollower">
+      <div class="form-group row mb-0">
+        <label class="sr-only" for="inlineFormInputGroup">Your Instagram username</label>
+        <div class="input-group mb-2">
+          <div class="input-group-prepend">
+            <div class="input-group-text">@</div>
+          </div>
+          <input id="username" type="text" class="form-control" id="inlineFormInputGroup" placeholder="Your Instagram username" autocomplete="off">
+        </div>
+      </div>
+      <div class="form-group row mb-1">
+          <button id="buttonGetFollower" type="submit" class="btn btn-primary mb-2 w-100">Get one follower</button>
+      </div>
+      <span id="textFail" class="error hide">Whoops! Something went wrong :( Try again</span>
+    </form>
+  </div>
+
+  <h1 id="textDone" class="h3 font-weight-normal text-center main-container animate-bottom hide">
+    Great! Enjoy your new follower :)
+  </h1>
+
+  <script src="/__/firebase/7.19.1/firebase-app.js"></script>
+  <script src="/__/firebase/7.19.1/firebase-analytics.js"></script>
+  <script src="/__/firebase/7.19.1/firebase-auth.js"></script>
+  <script src="/__/firebase/init.js"></script>
+  <script src="main.js"></script>
+
+  <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+    integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>
