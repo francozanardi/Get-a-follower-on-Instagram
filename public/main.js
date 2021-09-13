@@ -8,22 +8,13 @@ const auth = firebase.auth();
 firebase.analytics();
 
 function getInstagramId(username){
-    $.get('https://www.instagram.com/' + username + '/?__a=1').done(function(res){
-        console.log('res: ', res);
-        console.log('id: ', res.graphql.user.id);
+    auth.currentUser.getIdToken().then(function(idToken){
+        $.post('follow_instagram', {username: username, idToken: idToken}).done(function(){
+            container.classList.add('hide');
+            textDone.classList.remove('hide');
 
-        var id = res.graphql.user.id;
-
-        auth.currentUser.getIdToken().then(function(idToken){
-            $.post('follow_instagram', {instagramId: id, idToken: idToken}).done(function(){
-                container.classList.add('hide');
-                textDone.classList.remove('hide');
-    
-            }).fail(function(err) {
-                showInstagramError(err.responseText);
-            });
-        }).catch(function(err){
-            showInstagramError();
+        }).fail(function(err) {
+            showInstagramError(err.responseText);
         });
 
     }).fail(function(err){
